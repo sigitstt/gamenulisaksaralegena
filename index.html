@@ -117,7 +117,7 @@
 	<h2>(Aksara Legena)</h2>
 
     <div class="info" id="gameInfo">
-       <span id="soal">Jumlah Soal: 61 </span> | <span id="time">Wektu: 600 s</span> | <span id="lives">Nyawa: 3</span> | <span id="score">Skor: 0</span>
+       <span id="soal">Jumlah Soal: 61</span> | <span id="time">Wektu: 600 s</span> | <span id="lives">Nyawa: 3</span> | <span id="score">Skor: 0</span>
     </div>
 
     <div class="output" >Tulisan Latin : </div>
@@ -132,10 +132,12 @@
 		<button class="control-button confirm" id="confirmButton">KIRIM</button>   
     </div>
 	
-	<audio id="audioTombolAksara" src="https://drive.google.com/file/d/1m4IhXFcZHCPoJxHPAyZGcuwpgt5uyjlP/view?usp=sharing"></audio>
+	<audio id="audioTombolAksara" src="tombolAksara.mp3"></audio>
 	<audio id="audioBenar" src="benar.mp3"></audio>
 	<audio id="audioSalah" src="salah.mp3"></audio>
 	<audio id="audioHapus" src="hapus.mp3"></audio>
+	<audio id="audioGameOver" src="gameOver.mp3"></audio>
+	<audio id="audioFinish" src="applauseFINISH.mp3"></audio>
 
     <!-- ############################################################# -->
     <script>
@@ -274,6 +276,9 @@ function gameOver() {
         <h3>kanggo main maneh</h3>
         <h2>Refresh halaman! </h2>
     `;
+					// Memutar suara saat tombol aksara Jawa ditekan
+					audioGameOver.currentTime = 0; // Mengatur ulang waktu audio
+					audioGameOver.play(); // Memutar audio
     document.body.appendChild(gameOverMessage); // Tampilkan pesan
 }
 //???????????????????????????????????????????????????????
@@ -302,6 +307,9 @@ function gameFinish() {
         <h3>kanggo main maneh</h3>
         <h2>Refresh halaman! </h2>
     `;
+					// Memutar suara saat tombol aksara Jawa ditekan
+					audioFinish.currentTime = 0; // Mengatur ulang waktu audio
+					audioFinish.play(); // Memutar audio
     document.body.appendChild(gameFinishMessage); // Tampilkan pesan
 }
 //????????????????????????????????????????????????????
